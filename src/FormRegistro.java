@@ -2,7 +2,7 @@ import javax.swing.*;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import javax.swing.filechooser.FileNameExtensionFilter;
-import java.awt.*;
+import java.awt.Image;
 import java.io.File;
 import java.text.Normalizer;
 import java.util.ArrayList;
@@ -19,7 +19,7 @@ public class FormRegistro extends JFrame {
     // RUTA DE LA FOTO ELEGIDA <KEVIN>
     private String rutaFoto = "";
 
-    // COMPONENTES <KEVIN>
+    // COMPONENTES: se dibujan en FormRegistro.form, aqui solo se declaran (mismo field name) <KEVIN>
     private JPanel panelPrincipal;
     private JComboBox<String> cmbTipoId;
     private JTextField txtNumeroId;
@@ -38,98 +38,25 @@ public class FormRegistro extends JFrame {
 
     public FormRegistro(ArrayList<Usuario> usuarios) {
         this.usuarios = usuarios;
+        setContentPane(panelPrincipal); // el panel dibujado en el .form
 
         // CONFIGURACION DE LA VENTANA <KEVIN>
         setTitle("BookUsers · Registrar usuario");
-        setSize(750, 520);
+        setSize(700, 800);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); // cierra solo esta ventana
         setLocationRelativeTo(null);
-        setLayout(new BorderLayout());
 
-        panelPrincipal = new JPanel(new GridLayout(12, 2, 5, 5));
-        panelPrincipal.setBorder(BorderFactory.createEmptyBorder(15, 15, 15, 15));
-
-        // TIPO DE IDENTIFICACION (tabla DIAN) <KEVIN>
-        panelPrincipal.add(new JLabel("Tipo de identificación:"));
-        cmbTipoId = new JComboBox<>(new String[]{
-                "11 - Registro civil de nacimiento",
-                "12 - Tarjeta de identidad",
-                "13 - Cédula de ciudadanía",
-                "21 - Tarjeta de extranjería",
-                "22 - Cédula de extranjería",
-                "41 - Pasaporte",
-                "42 - Documento de identificación extranjero",
-                "47 - Permiso Especial de Permanencia (PEP)",
-                "91 - NUIP"
-        });
+        // TIPO DE IDENTIFICACION (tabla DIAN): se llena desde el codigo con addItem <KEVIN>
+        cmbTipoId.addItem("11 - Registro civil de nacimiento");
+        cmbTipoId.addItem("12 - Tarjeta de identidad");
+        cmbTipoId.addItem("13 - Cédula de ciudadanía");
+        cmbTipoId.addItem("21 - Tarjeta de extranjería");
+        cmbTipoId.addItem("22 - Cédula de extranjería");
+        cmbTipoId.addItem("41 - Pasaporte");
+        cmbTipoId.addItem("42 - Documento de identificación extranjero");
+        cmbTipoId.addItem("47 - Permiso Especial de Permanencia (PEP)");
+        cmbTipoId.addItem("91 - NUIP");
         cmbTipoId.setSelectedIndex(2); // arranca en Cédula de ciudadanía
-        panelPrincipal.add(cmbTipoId);
-
-        // NUMERO DE IDENTIFICACION <KEVIN>
-        panelPrincipal.add(new JLabel("Número de identificación:"));
-        txtNumeroId = new JTextField();
-        panelPrincipal.add(txtNumeroId);
-
-        // NOMBRE COMPLETO <KEVIN>
-        panelPrincipal.add(new JLabel("Primer nombre:"));
-        txtPrimerNombre = new JTextField();
-        panelPrincipal.add(txtPrimerNombre);
-
-        panelPrincipal.add(new JLabel("Segundo nombre (opcional):"));
-        txtSegundoNombre = new JTextField();
-        panelPrincipal.add(txtSegundoNombre);
-
-        panelPrincipal.add(new JLabel("Primer apellido:"));
-        txtPrimerApellido = new JTextField();
-        panelPrincipal.add(txtPrimerApellido);
-
-        panelPrincipal.add(new JLabel("Segundo apellido (opcional):"));
-        txtSegundoApellido = new JTextField();
-        panelPrincipal.add(txtSegundoApellido);
-
-        // NOMBRE DE USUARIO (GENERADO) <KEVIN>
-        panelPrincipal.add(new JLabel("Nombre de usuario (GENERADO):"));
-        lblUsername = new JLabel("Se genera automáticamente");
-        panelPrincipal.add(lblUsername);
-
-        // CONTRASEÑA <KEVIN>
-        panelPrincipal.add(new JLabel("Contraseña:"));
-        txtPassword = new JPasswordField();
-        panelPrincipal.add(txtPassword);
-
-        // TELEFONO <KEVIN>
-        panelPrincipal.add(new JLabel("Teléfono:"));
-        txtTelefono = new JTextField();
-        panelPrincipal.add(txtTelefono);
-
-        // CORREO <KEVIN>
-        panelPrincipal.add(new JLabel("Correo electrónico:"));
-        txtCorreo = new JTextField();
-        panelPrincipal.add(txtCorreo);
-
-        // FOTO <KEVIN>
-        panelPrincipal.add(new JLabel("Fotografía:"));
-        JPanel panelFoto = new JPanel(new FlowLayout(FlowLayout.LEFT));
-        btnCargarFoto = new JButton("Buscar foto");
-        lblRutaFoto = new JLabel("Ningún archivo seleccionado");
-        panelFoto.add(btnCargarFoto);
-        panelFoto.add(lblRutaFoto);
-        panelPrincipal.add(panelFoto);
-
-        // BOTON GUARDAR <KEVIN>
-        panelPrincipal.add(new JLabel("")); // espacio vacio para alinear
-        btnGuardar = new JButton("Registrar usuario");
-        panelPrincipal.add(btnGuardar);
-
-        add(panelPrincipal, BorderLayout.CENTER);
-
-        // VISTA PREVIA DE LA FOTO (a la derecha) <KEVIN>
-        lblVistaFoto = new JLabel("Sin foto", SwingConstants.CENTER);
-        lblVistaFoto.setPreferredSize(new Dimension(140, 140));
-        lblVistaFoto.setBorder(BorderFactory.createLineBorder(Color.GRAY));
-        JPanel panelVista = new JPanel(new FlowLayout(FlowLayout.CENTER, 10, 15));
-        panelVista.add(lblVistaFoto);
-        add(panelVista, BorderLayout.EAST);
 
         // USERNAME EN VIVO: el DocumentListener avisa cada vez que cambia el texto <KEVIN>
         DocumentListener oyenteUsername = new DocumentListener() {
@@ -265,5 +192,9 @@ public class FormRegistro extends JFrame {
         lblVistaFoto.setIcon(null);
         lblVistaFoto.setText("Sin foto");
         // lblUsername se reinicia solo: al vaciar los campos se dispara el DocumentListener
+    }
+
+    private void createUIComponents() {
+        // TODO: place custom component creation code here
     }
 }
