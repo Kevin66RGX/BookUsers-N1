@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="FormRegistro">
-  <grid id="27dc6" binding="panelPrincipal" layout-manager="GridLayoutManager" row-count="16" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="panelPrincipal" custom-create="true" layout-manager="GridLayoutManager" row-count="15" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
-      <xy x="20" y="20" width="494" height="676"/>
+      <xy x="20" y="20" width="494" height="707"/>
     </constraints>
     <properties/>
     <border type="none"/>
@@ -13,8 +13,9 @@
           <grid row="0" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <font name="Unispace" size="18"/>
-          <text value="AÑADIR REGISTRO"/>
+          <font name="Segoe UI" size="48" style="3"/>
+          <foreground color="-7960909"/>
+          <text value="Añadir registro"/>
         </properties>
       </component>
       <component id="71ad2" class="javax.swing.JLabel">
@@ -22,8 +23,9 @@
           <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <font name="Droid Sans Mono Slashed" size="14"/>
-          <text value="  PRIMER APELLIDO"/>
+          <font name="Segoe UI" size="18" style="3"/>
+          <foreground color="-7960909"/>
+          <text value="Primer apellido"/>
         </properties>
       </component>
       <component id="81f1d" class="javax.swing.JLabel">
@@ -31,8 +33,9 @@
           <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <font name="Droid Sans Mono Slashed" size="14"/>
-          <text value="  SEGUNDO NOMBRE"/>
+          <font name="Segoe UI" size="18" style="3"/>
+          <foreground color="-7960909"/>
+          <text value="Segundo nombre"/>
         </properties>
       </component>
       <component id="52437" class="javax.swing.JLabel">
@@ -40,8 +43,9 @@
           <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <font name="Droid Sans Mono Slashed" size="14"/>
-          <text value="  PRIMER NOMBRE"/>
+          <font name="Segoe UI" size="18" style="3"/>
+          <foreground color="-7960909"/>
+          <text value="Primer nombre"/>
         </properties>
       </component>
       <component id="eba4d" class="javax.swing.JLabel">
@@ -49,8 +53,9 @@
           <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <font name="Droid Sans Mono Slashed" size="14"/>
-          <text value="  NUMERO DE IDENTIFICACIÓN"/>
+          <font name="Segoe UI" size="18" style="3"/>
+          <foreground color="-7960909"/>
+          <text value="Numero de identificación"/>
         </properties>
       </component>
       <component id="11bac" class="javax.swing.JLabel">
@@ -58,8 +63,9 @@
           <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <font name="Droid Sans Mono Slashed" size="14"/>
-          <text value="  TIPO DE IDENTIFICACIÓN"/>
+          <font name="Segoe UI" size="18" style="3"/>
+          <foreground color="-7960909"/>
+          <text value="Tipo de identificación"/>
         </properties>
       </component>
       <component id="aac16" class="javax.swing.JLabel">
@@ -67,8 +73,9 @@
           <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <font name="Droid Sans Mono Slashed" size="14"/>
-          <text value="  SEGUNDO APELLIDO"/>
+          <font name="Segoe UI" size="18" style="3"/>
+          <foreground color="-7960909"/>
+          <text value="Segundo apellido "/>
         </properties>
       </component>
       <component id="97733" class="javax.swing.JLabel">
@@ -76,8 +83,9 @@
           <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <font name="Droid Sans Mono Slashed" size="14"/>
-          <text value="  NOMBRE DE USUARIO"/>
+          <font name="Segoe UI" size="18" style="3"/>
+          <foreground color="-7960909"/>
+          <text value="Nombre de usuario"/>
         </properties>
       </component>
       <component id="fba3b" class="javax.swing.JLabel">
@@ -85,8 +93,9 @@
           <grid row="9" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <font name="Droid Sans Mono Slashed" size="14"/>
-          <text value="  CONTRASEÑA"/>
+          <font name="Segoe UI" size="18" style="3"/>
+          <foreground color="-7960909"/>
+          <text value="Contraseña"/>
         </properties>
       </component>
       <component id="509ad" class="javax.swing.JLabel">
@@ -94,8 +103,9 @@
           <grid row="10" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <font name="Droid Sans Mono Slashed" size="14"/>
-          <text value="  TELEFONO"/>
+          <font name="Segoe UI" size="18" style="3"/>
+          <foreground color="-7960909"/>
+          <text value="Telefono"/>
         </properties>
       </component>
       <component id="6099d" class="javax.swing.JLabel">
@@ -103,8 +113,9 @@
           <grid row="11" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <font name="Droid Sans Mono Slashed" size="14"/>
-          <text value="  CORREO ELECTRONICO"/>
+          <font name="Segoe UI" size="18" style="3"/>
+          <foreground color="-7960909"/>
+          <text value="Correo electrónico"/>
         </properties>
       </component>
       <component id="b2837" class="javax.swing.JComboBox" binding="cmbTipoId">
@@ -151,7 +162,9 @@
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <text value=""/>
+        </properties>
       </component>
       <component id="59827" class="javax.swing.JLabel" binding="lblUsername">
         <constraints>
@@ -190,7 +203,9 @@
           <grid row="12" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="  FOTOGRAFIA"/>
+          <font name="Segoe UI" size="18" style="3"/>
+          <foreground color="-7960909"/>
+          <text value="Fotografía"/>
         </properties>
       </component>
       <component id="1e93c" class="javax.swing.JButton" binding="btnCargarFoto">
@@ -211,7 +226,9 @@
       </component>
       <component id="393b3" class="javax.swing.JButton" binding="btnGuardar">
         <constraints>
-          <grid row="15" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="14" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="-1" height="44"/>
+          </grid>
         </constraints>
         <properties>
           <text value="Registrar usuario"/>
@@ -225,15 +242,10 @@
         </constraints>
         <properties>
           <enabled value="true"/>
-          <horizontalTextPosition value="10"/>
-          <text value="            SIN FOTO"/>
+          <horizontalAlignment value="0"/>
+          <horizontalTextPosition value="0"/>
+          <text value="SIN FOTO"/>
         </properties>
-      </component>
-      <component id="4759c" class="javax.swing.JSeparator">
-        <constraints>
-          <grid row="14" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties/>
       </component>
     </children>
   </grid>
